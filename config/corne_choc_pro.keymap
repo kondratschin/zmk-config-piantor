@@ -136,7 +136,7 @@
             &kp ESC         &kp Q           &kp W           &kp F           &kp P           &kp B                   &mo SETTINGS    &kp Y           &kp U           &kp L           &kp J           &kp DEL
             &kp TAB         &mt LSHFT A     &mt LCTRL R     &mt LALT S      &mt LGUI T      &kp G                   &kp HOME        &mt RGUI N      &mt LALT E      &mt RCTRL I     &mt RSHFT O     &kp BSPC
             &kp BSLH        &kp Z           &kp X           &kp C           &kp D           &kp V                   &kp EXCL        &kp H           &kp K           &kp COMMA       &kp DOT         &kp SQT
-                                            &kp LCTRL       &kp LSHFT       &lt NUMPAD SPACE                        &lt SYMBOLS ENTER &kp RSHFT       &kp RCTRL
+                                            &kp LCTRL       &kp LSHFT       &lt NUMPAD &kp SPACE                   &lt SYMBOLS &kp ENTER &kp RSHFT       &kp RCTRL
             >;
         };
 
