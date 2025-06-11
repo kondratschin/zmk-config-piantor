@@ -31,9 +31,7 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_M1_OE_CAP";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>,
-                       &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4,
-                       <&macro_release &kp LALT>;
+            bindings = <&macro_press &kp LALT &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4 &macro_release &kp LALT>;
         };
 
         // M2: ALT+0176 -> °
@@ -41,9 +39,7 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_M2_DEG";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>,
-                       &macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6,
-                       <&macro_release &kp LALT>;
+            bindings = <&macro_press &kp LALT &macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6 &macro_release &kp LALT>;
         };
 
         // M3: Ctrl+C (as defined in Vial) - CORRECTED SYNTAX
@@ -51,7 +47,7 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_M3_COPY";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp C>, <&macro_release &kp LCTRL>;
+            bindings = <&macro_press &kp LCTRL &macro_tap &kp C &macro_release &kp LCTRL>;
         };
 
         // M4: Ctrl+V (as defined in Vial) - CORRECTED SYNTAX
@@ -59,7 +55,7 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_M4_PASTE";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp V>, <&macro_release &kp LCTRL>;
+            bindings = <&macro_press &kp LCTRL &macro_tap &kp V &macro_release &kp LCTRL>;
         };
         
         // M12: ALT+0228 -> ä
@@ -67,7 +63,7 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_a_uml";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8, &macro_release &kp LALT>;
+            bindings = <&macro_press &kp LALT &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8 &macro_release &kp LALT>;
         };
         
         // M13: ALT+0246 -> ö
@@ -75,7 +71,7 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_o_uml";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6, &macro_release &kp LALT>;
+            bindings = <&macro_press &kp LALT &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6 &macro_release &kp LALT>;
         };
 
         // M14: ALT+0220 -> Ü
@@ -83,7 +79,7 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_U_uml";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0, &macro_release &kp LALT>;
+            bindings = <&macro_press &kp LALT &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0 &macro_release &kp LALT>;
         };
 
         // M15: ALT+0128 -> €
@@ -91,7 +87,7 @@
             compatible = "zmk,behavior-macro";
             label = "MACRO_EURO";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, &macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8, &macro_release &kp LALT>;
+            bindings = <&macro_press &kp LALT &macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8 &macro_release &kp LALT>;
         };
     };
 
