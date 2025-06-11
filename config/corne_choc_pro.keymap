@@ -42,7 +42,7 @@
             bindings = <&macro_press &kp LALT &macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6 &macro_release &kp LALT>;
         };
 
-        // M3: Ctrl+C (as defined in Vial) - CORRECTED SYNTAX
+        // M3: Ctrl+C (as defined in Vial)
         m3_copy: m3_copy {
             compatible = "zmk,behavior-macro";
             label = "MACRO_M3_COPY";
@@ -50,7 +50,7 @@
             bindings = <&macro_press &kp LCTRL &macro_tap &kp C &macro_release &kp LCTRL>;
         };
 
-        // M4: Ctrl+V (as defined in Vial) - CORRECTED SYNTAX
+        // M4: Ctrl+V (as defined in Vial)
         m4_paste: m4_paste {
             compatible = "zmk,behavior-macro";
             label = "MACRO_M4_PASTE";
@@ -74,10 +74,10 @@
             bindings = <&macro_press &kp LALT &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6 &macro_release &kp LALT>;
         };
 
-        // M14: ALT+0220 -> Ü
-        macro_U_uml: macro_U_uml {
+        // M14: ALT+0220 -> Ü (Renamed to avoid parsing issues)
+        macro_u_uml_cap: macro_u_uml_cap {
             compatible = "zmk,behavior-macro";
-            label = "MACRO_U_uml";
+            label = "MACRO_U_UML_CAP";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LALT &macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0 &macro_release &kp LALT>;
         };
@@ -119,10 +119,11 @@
             bindings = <&macro_o_uml>;
         };
         
-        combo_U_uml {
+        // Renamed combo to match the new macro name
+        combo_u_uml_cap {
             timeout-ms = <50>;
             key-positions = <10 29>; // Corresponds to S-Tap and E-Tap
-            bindings = <&macro_U_uml>;
+            bindings = <&macro_u_uml_cap>;
         };
     };
 
