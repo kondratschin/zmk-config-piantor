@@ -46,20 +46,20 @@
                        <&macro_release &kp LALT>;
         };
 
-        // M3: Ctrl+C (as defined in Vial)
+        // M3: Ctrl+C (as defined in Vial) - CORRECTED SYNTAX
         m3_copy: m3_copy {
             compatible = "zmk,behavior-macro";
             label = "MACRO_M3_COPY";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp C>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp C>, <&macro_release &kp LCTRL>;
         };
 
-        // M4: Ctrl+V (as defined in Vial)
+        // M4: Ctrl+V (as defined in Vial) - CORRECTED SYNTAX
         m4_paste: m4_paste {
             compatible = "zmk,behavior-macro";
             label = "MACRO_M4_PASTE";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp V>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp V>, <&macro_release &kp LCTRL>;
         };
         
         // M12: ALT+0228 -> ä
