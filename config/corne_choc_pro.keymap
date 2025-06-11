@@ -133,44 +133,68 @@
         default_layer {
             label = "BASE";
             bindings = <
-            // Left Hand                                                              // Right Hand
-            &kp ESC         &kp Q           &kp W           &kp F           &kp P           &kp B                   &mo SETTINGS    &kp Y           &kp U           &kp L           &kp J           &kp DEL
-            &kp TAB         &mt LSHFT A     &mt LCTRL R     &mt LALT S      &mt LGUI T      &kp G                   &kp HOME        &mt RGUI N      &mt LALT E      &mt RCTRL I     &mt RSHFT O     &kp BSPC
-            &kp BSLH        &kp Z           &kp X           &kp C           &kp D           &kp V                   &kp EXCL        &kp H           &kp K           &kp COMMA       &kp DOT         &kp SQT
-                                            &kp LCTRL       &kp LSHFT       &lt NUMPAD &kp SPACE                   &lt SYMBOLS &kp ENTER &kp RSHFT       &kp RCTRL
+                // Left Hand Side (21 keys)
+                &kp ESC         &kp Q           &kp W           &kp F           &kp P           &kp B
+                &kp TAB         &mt LSHFT A     &mt LCTRL R     &mt LALT S      &mt LGUI T      &kp G
+                &kp BSLH        &kp Z           &kp X           &kp C           &kp D           &kp V
+                                                &kp LCTRL       &kp LSHFT       &lt NUMPAD &kp SPACE
+
+                // Right Hand Side (21 keys)
+                &kp DEL         &kp BSPC        &kp Y           &kp U           &kp L           &kp J
+                &kp SLASH       &mt RSHFT O     &mt RCTRL I     &mt LALT E      &mt RGUI N      &kp M
+                &kp PSCRN       &kp SQT         &kp DOT         &kp COMMA       &kp H           &kp K
+                                                &kp RCTRL       &kp RSHFT       &lt SYMBOLS &kp ENTER
             >;
         };
 
         symbols_layer {
             label = "SYMBOLS";
             bindings = <
-            // Left Hand                                                              // Right Hand
-            &kp GRAVE       &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp CARET               &trans          &kp AMPS        &kp ASTRK       &kp UP          &kp MINUS       &kp EQUAL
-            &trans          &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp PIPE                &trans          &kp LEFT        &kp DOWN        &kp RIGHT       &trans          &trans
-            &trans          &kp GRAVE       &macro_m1       &kp LBKT        &kp RBKT        &macro_m2               &trans          &trans          &trans          &kp GRAVE       &trans          &trans
-                                            &trans          &trans          &trans                                  &trans          &trans          &trans
+                // Left Hand Side (21 keys)
+                &kp GRAVE       &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp CARET
+                &trans          &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp PIPE
+                &trans          &kp GRAVE       &macro_m1       &kp LBKT        &kp RBKT        &macro_m2
+                                                &trans          &trans          &trans
+
+                // Right Hand Side (21 keys)
+                &macro_u_uml_cap &kp EQUAL       &kp MINUS       &kp UP          &kp ASTRK       &kp AMPS
+                &trans          &trans          &kp RIGHT       &kp DOWN        &kp LEFT        &trans
+                &trans          &trans          &kp GRAVE       &trans          &trans          &trans
+                                                &trans          &trans          &trans
             >;
         };
 
         numpad_layer {
             label = "NUMPAD";
             bindings = <
-            // Left Hand                                                              // Right Hand
-            &trans          &trans          &trans          &trans          &trans          &trans                  &kp CALC        &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp BSPC        &kp EQUAL
-            &trans          &trans          &trans          &trans          &trans          &trans                  &kp KP_N0       &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_PLUS     &kp KP_MINUS
-            &trans          &trans          &trans          &trans          &trans          &trans                  &trans          &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_ASTERISK &kp KP_SLASH
-                                            &kp NUM_LOCK    &trans          &trans                                  &kp ENTER       &kp KP_DOT      &kp COMMA
+                // Left Hand Side (21 keys)
+                &trans          &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans          &trans
+                                                &kp NUM_LOCK    &trans          &trans
+                
+                // Right Hand Side (21 keys)
+                &kp CALC        &kp EQUAL       &kp KP_N9       &kp KP_N8       &kp KP_N7       &kp BSPC
+                &kp KP_0        &kp KP_PLUS     &kp KP_N6       &kp KP_N5       &kp KP_N4       &kp KP_MINUS
+                &trans          &kp KP_ASTERISK &kp KP_N3       &kp KP_N2       &kp KP_N1       &kp KP_SLASH
+                                                &kp COMMA       &kp KP_DOT      &kp ENTER
             >;
         };
 
         settings_layer {
             label = "SETTINGS";
             bindings = <
-            // Left Hand                                                              // Right Hand
-            &bootloader     &bt BT_CLR      &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
-            &rgb_ug TOG     &rgb_ug HUI     &rgb_ug SAI     &rgb_ug VAI     &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
-            &rgb_ug MOD     &rgb_ug HUD     &rgb_ug SAD     &rgb_ug VAD     &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
-                                            &kp LGUI        &trans          &kp SPACE                               &kp ENTER       &trans          &kp RGUI
+                // Left Hand Side (21 keys)
+                &bootloader     &trans          &trans          &trans          &trans          &trans
+                &rgb_ug TOG     &rgb_ug HUI     &rgb_ug SAI     &rgb_ug VAI     &trans          &trans
+                &rgb_ug MOD     &rgb_ug HUD     &rgb_ug SAD     &rgb_ug VAD     &trans          &trans
+                                                &kp LGUI        &trans          &kp SPACE
+
+                // Right Hand Side (21 keys)
+                &trans          &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans          &trans
+                &trans          &trans          &trans          &trans          &trans          &trans
+                                                &kp RGUI        &trans          &kp ENTER
             >;
         };
     };
