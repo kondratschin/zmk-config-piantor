@@ -145,8 +145,8 @@
             bindings = <
             // Left Hand                                                              // Right Hand
             &kp GRAVE       &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp CARET               &trans          &kp AMPS        &kp ASTRK       &kp UP          &kp MINUS       &kp EQUAL
-            &trans          &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp PIPE                &trans          &kp LEFT        &kp DOWN        &kp RIGHT       &none           &none
-            &trans          &kp GRAVE       &macro_m1       &kp LBKT        &kp RBKT        &macro_m2               &trans          &none           &none           &kp GRAVE       &none           &none
+            &trans          &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &kp PIPE                &trans          &kp LEFT        &kp DOWN        &kp RIGHT       &trans          &trans
+            &trans          &kp GRAVE       &macro_m1       &kp LBKT        &kp RBKT        &macro_m2               &trans          &trans          &trans          &kp GRAVE       &trans          &trans
                                             &trans          &trans          &trans                                  &trans          &trans          &trans
             >;
         };
@@ -166,9 +166,9 @@
             label = "SETTINGS";
             bindings = <
             // Left Hand                                                              // Right Hand
-            &bootloader     &bt BT_CLR      &none           &none           &none           &none                   &none           &none           &none           &none           &none           &none
-            &rgb_ug TOG     &rgb_ug HUI     &rgb_ug SAI     &rgb_ug VAI     &none           &none                   &none           &none           &none           &none           &none           &none
-            &rgb_ug MOD     &rgb_ug HUD     &rgb_ug SAD     &rgb_ug VAD     &none           &none                   &none           &none           &none           &none           &none           &none
+            &bootloader     &bt BT_CLR      &trans          &trans          &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
+            &rgb_ug TOG     &rgb_ug HUI     &rgb_ug SAI     &rgb_ug VAI     &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
+            &rgb_ug MOD     &rgb_ug HUD     &rgb_ug SAD     &rgb_ug VAD     &trans          &trans                  &trans          &trans          &trans          &trans          &trans          &trans
                                             &kp LGUI        &trans          &kp SPACE                               &kp ENTER       &trans          &kp RGUI
             >;
         };
