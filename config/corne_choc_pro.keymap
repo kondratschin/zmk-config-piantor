@@ -44,7 +44,7 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&trans     &kp AT          &kp HASH         &kp DOLLAR            &kp PERCENT            &kp CARET       &trans  &trans  &kp AMPERSAND  &kp ASTRK        &kp UP_ARROW    &kp N9     &kp N0  &kp BSPC
+&kp TILDE  &kp AT          &kp HASH         &kp DOLLAR            &kp PERCENT            &kp CARET       &trans  &trans  &kp AMPERSAND  &kp ASTRK        &kp UP_ARROW    &kp N9     &kp N0  &kp BSPC
 &kp LCTRL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &bt BT_SEL 4    &trans  &trans  &none          &kp LEFT         &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
 &kp LSHFT  &bt BT_CLR      &rgb_ug RGB_TOG  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &studio_unlock                  &none          &none            &none           &trans     &trans  &trans
                                             &trans                &trans                 &kp SPACE                       &trans         &rgb_ug RGB_TOG  &trans
@@ -61,10 +61,10 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp LCTRL  &kp RCTRL  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans     &kp LALT   &kp RALT   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans                           &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE                        &kp RET    &trans     &kp RALT
+&kp TAB    &kp EXCL  &kp AT  &kp HASH         &kp DLLR  &kp PRCNT  &kp LCTRL  &kp K_CALC  &none         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE    &kp KP_EQUAL
+&kp LCTRL  &trans    &trans  &trans           &trans    &trans     &kp LALT   &none       &kp NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_SUBTRACT
+&kp LSHFT  &trans    &trans  &trans           &trans    &trans                            &none         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK  &kp KP_DIVIDE
+                             &kp LOCKING_NUM  &trans    &kp SPACE                         &kp RET       &kp COMMA        &kp PERIOD
             >;
         };
 
