@@ -14,6 +14,31 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        aumlaut {
+            bindings = <&aumlaut>;
+            key-positions = <15 24>;
+        };
+    };
+
+    macros {
+        aumlaut: aumlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "AUMLAUT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -63,7 +88,7 @@
             bindings = <
 &kp TAB    &kp EXCL  &kp AT  &kp HASH         &kp DLLR  &kp PRCNT  &kp LCTRL  &kp K_CALC  &none         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE    &kp KP_EQUAL
 &kp LCTRL  &trans    &trans  &trans           &trans    &trans     &kp LALT   &none       &kp NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_SUBTRACT
-&kp LSHFT  &trans    &trans  &trans           &trans    &trans                            &none         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK  &kp KP_DIVIDE
+&trans     &trans    &trans  &trans           &trans    &trans                            &none         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK  &kp KP_DIVIDE
                              &kp LOCKING_NUM  &trans    &kp SPACE                         &kp RET       &kp COMMA        &kp PERIOD
             >;
         };
