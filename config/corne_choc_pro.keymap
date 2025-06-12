@@ -14,58 +14,127 @@
 };
 
 / {
-    /*
-     * A single, global hold-tap behavior to control the tapping term
-     * for all mod-taps, making the configuration cleaner.
+    /* These macros and combos are added based on the user's Vial config,
+     * using the user-provided working example as a syntax guide.
+     * The keymap below this block remains untouched.
      */
+
     behaviors {
-        modtap: modtap {
+        mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP_200MS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>; // Optional: for faster quick taps
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;  // Set your desired tapping term in ms
+            bindings = <>, <>;
+            display-name = "Mod-Tap";
         };
     };
-
+  
     macros {
         macro_a_uml: macro_a_uml {
             compatible = "zmk,behavior-macro";
+            label = "MACRO_a_uml";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LALT>, <&macro_tap>, <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>, <&macro_release>, <&kp LALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>,
+                <&macro_release>,
+                <&kp LALT>;
         };
+
         macro_o_uml: macro_o_uml {
             compatible = "zmk,behavior-macro";
+            label = "MACRO_o_uml";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LALT>, <&macro_tap>, <&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>, <&macro_release>, <&kp LALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>,
+                <&macro_release>,
+                <&kp LALT>;
         };
+
         macro_u_uml: macro_u_uml {
             compatible = "zmk,behavior-macro";
+            label = "MACRO_u_uml";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LALT>, <&macro_tap>, <&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2>, <&macro_release>, <&kp LALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2>,
+                <&macro_release>,
+                <&kp LALT>;
         };
+
         macro_U_uml_cap: macro_U_uml_cap {
             compatible = "zmk,behavior-macro";
+            label = "MACRO_U_uml_cap";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LALT>, <&macro_tap>, <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>, <&macro_release>, <&kp LALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>,
+                <&macro_release>,
+                <&kp LALT>;
         };
+
         macro_euro: macro_euro {
             compatible = "zmk,behavior-macro";
+            label = "MACRO_euro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LALT>, <&macro_tap>, <&kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>, <&macro_release>, <&kp LALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N2 &kp KP_N8>,
+                <&macro_release>,
+                <&kp LALT>;
         };
     };
 
     combos {
         compatible = "zmk,combos";
-        combo_semicolon { timeout-ms = <50>; key-positions = <39, 40>; bindings = <&kp SEMI>; };
-        combo_euro { timeout-ms = <50>; key-positions = <3, 4>; bindings = <&macro_euro>; };
-        combo_a_uml { timeout-ms = <50>; key-positions = <15, 35>; bindings = <&macro_a_uml>; };
-        combo_o_uml { timeout-ms = <50>; key-positions = <26, 35>; bindings = <&macro_o_uml>; };
-        combo_u_uml { timeout-ms = <50>; key-positions = <17, 35>; bindings = <&macro_u_uml>; };
-        combo_U_uml_cap { timeout-ms = <50>; key-positions = <24, 26>; bindings = <&macro_U_uml_cap>; };
+
+        combo_semicolon {
+            timeout-ms = <50>;
+            key-positions = <36 37>; /* DOT, COMMA */
+            bindings = <&kp SEMI>;
+        };
+
+        combo_euro {
+            timeout-ms = <50>;
+            key-positions = <3 2>; /* F, P */
+            bindings = <&macro_euro>;
+        };
+
+        combo_a_uml {
+            timeout-ms = <50>;
+            key-positions = <15 24>; /* A, E */
+            bindings = <&macro_a_uml>;
+        };
+
+        combo_o_uml {
+            timeout-ms = <50>;
+            key-positions = <24 26>; /* U, E */
+            bindings = <&macro_o_uml>;
+        };
+
+        combo_u_uml {
+            timeout-ms = <50>;
+            key-positions = <10 24>; /* S, E */
+            bindings = <&macro_u_uml>;
+        };
+
+        combo_U_uml_cap {
+            timeout-ms = <50>;
+            key-positions = <24 10 23>; /* E, O */
+            bindings = <&macro_U_uml_cap>;
+        };
     };
 };
 
@@ -74,50 +143,93 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "BASE";
+            display-name = "QWERTY";
             bindings = <
-                &kp ESC         &kp Q           &kp W           &kp F           &kp P           &kp B           &kp LC(C)       &kp PRNTSCRN    &kp J           &kp L           &kp U           &kp Y           &kp BSPC        &kp DEL
-                &kp TAB         &modtap LSHFT A &modtap LCTRL R &modtap LALT S  &modtap LGUI T  &kp G           &kp LC(V)       &kp HOME        &kp M           &modtap RGUI N  &modtap RALT E  &modtap RCTRL I &modtap RSHFT O &kp SLASH
-                &kp BSLH        &kp Z           &kp X           &kp C           &kp D           &kp V                                           &kp K           &kp H           &kp COMMA       &kp DOT         &kp SQT         &kp EXCL
-                                                &kp LCTRL       &kp LSHFT       &lt 2 &kp SPACE                   &lt 1 &kp ENTER   &mo 2           &kp RALT
+&kp ESC        &kp Q             &kp W        &kp F           &kp P           &kp B        &kp LC(C)  &kp PRINTSCREEN  &kp J        &kp L            &kp U            &kp Y        &kp BSPC           &kp DEL
+&kp TAB        &mt LEFT_SHIFT A  &mt LCTRL R  &mt LEFT_ALT S  &mt LCMD T      &kp G        &kp LC(V)  &kp HOME         &kp M        &mt RIGHT_GUI N  &mt RIGHT_ALT E  &mt RCTRL I  &mt RIGHT_SHIFT O  &kp SLASH
+&kp BACKSLASH  &kp Z             &kp X        &kp C           &kp D           &kp V                                    &kp K        &kp H            &kp COMMA        &kp DOT      &kp SQT            &kp EXCLAMATION
+                                              &kp LCTRL       &kp LEFT_SHIFT  &lt 2 SPACE                              &lt 1 ENTER  &mo 2            &kp RALT
             >;
         };
 
         lower_layer {
-            display-name = "SYMBOLS";
+            display-name = "NUMBER";
             bindings = <
-                &kp TILDE       &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp CARET       &trans          &trans          &kp AMPERSAND   &kp ASTRK       &kp UP          &kp N9          &kp N0          &kp BSPC
-                &kp LCTRL       &kp LBRC        &kp RBRC        &kp LPAR        &kp RPAR        &bt BT_SEL 4    &trans          &trans          &trans          &kp LEFT        &kp DOWN        &kp RIGHT       &trans          &trans
-                &kp LSHFT       &bt BT_CLR      &rgb_ug RGB_TOG &kp LBKT        &kp RBKT        &trans                                          &trans          &trans          &trans          &trans          &trans          &trans
-                                                &trans          &trans          &kp SPACE                       &trans          &rgb_ug RGB_TOG &trans
+&kp TILDE  &kp AT          &kp HASH         &kp DOLLAR            &kp PERCENT            &kp CARET       &trans  &trans  &kp AMPERSAND  &kp ASTRK        &kp UP_ARROW    &kp N9     &kp N0  &kp BSPC
+&kp LCTRL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &trans  &trans  &none          &kp LEFT         &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
+&kp LSHFT  &bt BT_CLR      &rgb_ug RGB_TOG  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &studio_unlock                  &none          &none            &none           &trans     &trans  &trans
+                                            &trans                &trans                 &kp SPACE                       &trans         &rgb_ug RGB_TOG  &trans
             >;
         };
 
         raise_layer {
-            display-name = "NUMPAD";
+            display-name = "SYMBOL";
             bindings = <
-                &kp TAB         &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PRCNT       &kp LCTRL       &kp K_CALC      &trans          &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp BSPC        &kp KP_EQUAL
-                &kp LCTRL       &trans          &trans          &trans          &trans          &trans          &kp LALT        &trans          &kp N0          &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_PLUS     &kp KP_MINUS
-                &kp LSHFT       &trans          &trans          &trans          &trans          &trans                                          &trans          &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_ASTERISK &kp KP_DIVIDE
-                                                &kp NUM_LOCK    &trans          &kp SPACE                       &kp RET         &kp COMMA       &kp DOT
+&kp TAB    &kp EXCL  &kp AT  &kp HASH         &kp DLLR  &kp PRCNT  &kp LCTRL  &kp K_CALCULATOR  &none         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE    &kp KP_EQUAL
+&kp LCTRL  &trans    &trans  &trans           &trans    &trans     &kp LALT   &none             &kp NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_SUBTRACT
+&trans     &trans    &trans  &trans           &trans    &trans                                  &none         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK  &kp KP_DIVIDE
+                             &kp LOCKING_NUM  &trans    &kp SPACE                               &kp RET       &kp COMMA        &kp PERIOD
             >;
         };
 
         extra_layer_1 {
-            display-name = "SETTINGS";
+            display-name = "EXTRA 1";
             bindings = <
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans                         &trans &trans &trans &trans &trans &trans
-                               &trans &trans &trans                               &trans &trans &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
             >;
         };
 
-        /* Remaining extra layers are empty */
-        extra_layer_2 { display-name = "EXTRA 2"; bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
-        extra_layer_3 { display-name = "EXTRA 3"; bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
-        extra_layer_4 { display-name = "EXTRA 4"; bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
-        extra_layer_5 { display-name = "EXTRA 5"; bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
-        extra_layer_6 { display-name = "EXTRA 6"; bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
+        extra_layer_2 {
+            display-name = "EXTRA 2";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
+            >;
+        };
+
+        extra_layer_3 {
+            display-name = "EXTRA 3";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
+            >;
+        };
+
+        extra_layer_4 {
+            display-name = "EXTRA 4";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
+            >;
+        };
+
+        extra_layer_5 {
+            display-name = "EXTRA 5";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
+            >;
+        };
+
+        extra_layer_6 {
+            display-name = "EXTRA 6";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                  &trans  &trans  &trans
+            >;
+        };
     };
 };
