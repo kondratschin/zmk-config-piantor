@@ -164,10 +164,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH    &kp DLLR  &kp PRCNT  &kp LCTRL  &kp K_CALCULATOR  &none      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE    &kp KP_EQUAL
-&kp LCTRL  &trans    &trans  &trans      &trans    &trans     &kp LALT   &none             &kp KP_N0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_SUBTRACT
-&trans     &trans    &trans  &trans      &trans    &trans                                  &none      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK  &kp KP_DIVIDE
-                             &kp KP_NUM  &trans    &kp SPACE                               &kp RET    &kp COMMA        &kp PERIOD
+&kp TAB    &kp EXCL      &kp AT        &kp HASH    &kp DLLR  &kp PRCNT  &kp LCTRL  &kp K_CALCULATOR  &none      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp BACKSPACE    &kp KP_EQUAL
+&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &trans      &trans    &trans     &kp LALT   &none             &kp KP_N0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_SUBTRACT
+&trans     &trans        &trans        &trans      &trans    &trans                                  &none      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ASTERISK  &kp KP_DIVIDE
+                                       &kp KP_NUM  &trans    &kp SPACE                               &kp RET    &kp COMMA        &kp PERIOD
             >;
         };
 
