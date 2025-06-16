@@ -94,6 +94,19 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
+        scharfes_s: scharfes_s {
+            compatible = "zmk,behavior-macro";
+            label = "SCHARFES_S";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N2 &kp KP_N2 &kp KP_N5>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
     };
 
     combos {
@@ -133,6 +146,11 @@
             timeout-ms = <50>;
             key-positions = <24 10 23>; /* E, O */
             bindings = <&macro_U_uml_cap>;
+        };
+
+        combo_ss {
+            bindings = <&scharfes_s>;
+            key-positions = <17 24>;
         };
     };
 };
