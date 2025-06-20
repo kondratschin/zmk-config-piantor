@@ -107,6 +107,19 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
+        degree: degree {
+            compatible = "zmk,behavior-macro";
+            label = "DEGREE";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_6>,
+                <&macro_release>,
+                <&kp LALT>;
+        };
     };
 
     combos {
@@ -172,10 +185,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp TILDE  &kp AT          &kp HASH         &kp DOLLAR            &kp PERCENT            &kp CARET       &trans  &trans  &kp AMPERSAND  &kp ASTRK        &kp UP_ARROW     &kp UNDERSCORE  &none   &kp BSPC
-&kp LCTRL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &trans  &trans  &none          &kp LEFT         &kp DOWN_ARROW   &kp RIGHT       &trans  &trans
-&none      &none           &none            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &studio_unlock                  &none          &none            &none            &trans          &trans  &trans
-                                            &trans                &trans                 &kp SPACE                       &trans         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF
+&kp TILDE  &kp AT          &kp HASH         &kp DOLLAR            &kp PERCENT            &kp CARET       &degree  &trans  &kp AMPERSAND  &kp ASTRK        &kp UP_ARROW     &kp UNDERSCORE  &none   &kp BSPC
+&kp LCTRL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &trans   &trans  &none          &kp LEFT         &kp DOWN_ARROW   &kp RIGHT       &trans  &trans
+&none      &none           &none            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &studio_unlock                   &none          &none            &none            &trans          &trans  &trans
+                                            &trans                &trans                 &kp SPACE                        &trans         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF
             >;
         };
 
