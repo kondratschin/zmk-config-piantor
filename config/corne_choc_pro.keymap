@@ -185,9 +185,9 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp TILDE  &kp AT          &kp HASH         &kp DOLLAR            &kp PERCENT            &kp CARET       &degree  &trans  &kp AMPERSAND  &kp ASTRK        &kp UP_ARROW     &kp UNDERSCORE  &none   &kp BSPC
-&kp LCTRL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &trans   &trans  &none          &kp LEFT         &kp DOWN_ARROW   &kp RIGHT       &trans  &trans
-&none      &none           &none            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &studio_unlock                   &none          &none            &none            &trans          &trans  &trans
+&kp TILDE  &kp AT          &kp HASH         &kp DOLLAR            &kp PERCENT            &kp CARET       &degree  &trans  &kp AMPERSAND  &kp ASTRK        &kp UP_ARROW     &kp UNDERSCORE  &kp KP_EQUAL  &kp BSPC
+&kp LCTRL  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &trans   &trans  &none          &kp LEFT         &kp DOWN_ARROW   &kp RIGHT       &trans        &trans
+&none      &none           &none            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &studio_unlock                   &none          &none            &none            &trans          &trans        &trans
                                             &trans                &trans                 &kp SPACE                        &trans         &rgb_ug RGB_TOG  &rgb_ug RGB_EFF
             >;
         };
